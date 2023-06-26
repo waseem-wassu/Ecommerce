@@ -102,6 +102,7 @@ app.delete("/deleteProduct", (req, res) => {
 // });
 
 app.listen(port, () => {
+    console.log("port no",`${port}`);
     console.log(`Listening on port ${port}`);
 });
 
