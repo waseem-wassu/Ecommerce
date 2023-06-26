@@ -77,7 +77,10 @@ app.put("/updateProduct", (req, res) => {
 })
 
 app.delete("/deleteProduct", (req, res) => {
+    // TAKING ID FOR DELETEPRODUCT
+ 
     const {_id} = req.body 
+    console.log(_id,"_id in product")
     console.log(_id)
     Product.findByIdAndDelete({
         _id
@@ -104,6 +107,8 @@ app.delete("/deleteProduct", (req, res) => {
 app.listen(port, () => {
     console.log("port no",`${port}`);
     console.log(`Listening on port ${port}`);
+
+
 });
 
 //CRUD = create, read, update and delete
